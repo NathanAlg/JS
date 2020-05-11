@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Notes des étudiants</title>
+        <meta charset="utf-8">
+		<link rel="stylesheet" href="styles.css">
+		<script type="text/javascript" src="fichier.js"></script>
+		
+    </head>
+    <h1> Notes des étudiants </h1>
+    <body>
+	    <table>
+   			<tr>
+       			<th>Semestre</th>
+       			<th>Etudiant</th>
+       			<th>Note</th>
+   			</tr>
+   			<tr>
+       			<td>S1</td>
+       			<td>E1</td>
+       			<td>18</td>
+   			</tr>
+   			<tr>
+       			<td>S1</td>
+       			<td>E2</td>
+       			<td>7</td>
+   			</tr>
+   			<tr>
+       			<td>S2</td>
+       			<td>E1</td>
+       			<td>17</td>
+   			</tr>
+   			<tr>
+       			<td>S2</td>
+       			<td>E2</td>
+       			<td>8</td>
+   			</tr>
+   			<tr>
+       			<td>S3</td>
+       			<td>E1</td>
+       			<td>16</td>
+   			</tr>
+   			<tr>
+       			<td>S3</td>
+       			<td>E2</td>
+       			<td>9</td>
+   			</tr>
+   			<tr>
+       			<td>S4</td>
+       			<td>E1</td>
+       			<td>13</td>
+   			</tr>
+   			<tr>
+       			<td>S4</td>
+       			<td>E2</td>
+       			<td>4</td>
+   			</tr>
+   			<tr id="id1">
+       			<td >S5</td>
+       			<td>E1</td>
+       			<td>12</td>
+   			</tr>
+   			<tr>
+       			<td>S5</td>
+       			<td>E2</td>
+       			<td>5</td>
+   			</tr>
+   			<tr>
+       			<td>S6</td>
+       			<td>E1</td>
+       			<td>14</td>
+   			</tr>
+   			<tr>
+       			<td>S6</td>
+       			<td>E2</td>
+       			<td>6</td>
+   			</tr>
+   			<tr>
+       			<td>S7</td>
+       			<td>E1</td>
+       			<td>12</td>
+   			</tr>
+   			<tr>
+       			<td>S7</td>
+       			<td>E2</td>
+       			<td>5</td>
+   			</tr>
+   			<tr>
+       			<td>S8</td>
+       			<td>E1</td>
+       			<td>10</td>
+   			</tr>
+   			<tr>
+       			<td>S8</td>
+       			<td>E2</td>
+       			<td>4</td>
+   			</tr>
+   			<tr>
+       			<td>S9</td>
+       			<td>E1</td>
+       			<td>13</td>
+   			</tr>
+   			<tr>
+       			<td>S9</td>
+       			<td>E2</td>
+       			<td>7</td>
+   			</tr>
+   			<tr>
+       			<td id="sem">S10</td>
+       			<td>E1</td>
+       			<td>15</td>
+   			</tr>
+   			<tr>
+       			<td>S10</td>
+       			<td>E2</td>
+       			<td>3</td>
+			   </tr>
+		</table>
+		</br>
+		<script>
+			    let newPara = document.createElement('p');
+    			newPara.id = 'nouveau';
+				let texteInsert = document.title;
+				let texte = document.createTextNode(texteInsert);
+    			newPara.appendChild(texte);
+				document.body.appendChild(newPara);
+
+				let newPara4 = document.createElement('p');
+				let texteInsert4 = document.getElementsByTagName('tr').length;
+				let texte4 = document.createTextNode(texteInsert4);
+    			newPara4.appendChild(texte4);
+				document.body.appendChild(newPara4);
+				
+				let newPara2 = document.createElement('p');
+				let texteInsert2 = document.getElementsByTagName('th').length;
+				let texte2 = document.createTextNode(texteInsert2);
+    			newPara2.appendChild(texte2);
+				document.body.appendChild(newPara2);
+				
+				let newPara3 = document.createElement('p');
+				let texteInsert3 = document.getElementsByTagName('tr').length/2+1;
+				let texte3 = document.createTextNode(texteInsert3);
+    			newPara3.appendChild(texte3);
+				document.body.appendChild(newPara3);
+				newPara.style.color = 'd';
+
+				let newPara5 = document.createElement('p');
+				let texteInsert5 = document.getElementById('sem').innerHTML;
+				texte5 = document.createTextNode(texteInsert5);
+				newPara5.appendChild(texte5);
+				document.body.appendChild(newPara5);
+
+				 let parent = document.getElementById('id1');
+				 let b = parent.childNodes[3];
+				 b.style.color = 'red';
+				 b.style.height = '200px'
+				 alert(b);
+				 
+				 let texteArea = document.createElement('textarea');
+				 alert(texteArea);
+				 document.body.appendChild(texteArea);
+				 texteArea.rows = '18';
+				 texteArea.cols = '318';
+		</script>
+    </body>
+</html>
