@@ -1,31 +1,11 @@
 let time;
 let time2;
 let ms = 0;
-let s = 0;
+let s = 59;
 let m= 0;
 let= 0;
 
-function Chronometre() {
-    
-    ms+=1;
-    if(ms == 10){
-        ms=1;
-        s+=1;
-    }
-    if(s == 60){
-        s = 0;
-        m+= 1;
-    }
-    if(m == 60){
-        m = 0;
-        h+=1;
-    }
-    if(s>= 58 || m>= 1 || h>= 1){
-        goodSmiley();
-    
-    }
-    console.log(h,m,s,ms);
-}
+
 
 function get2DContext(id){
 	let canvas = document.getElementById(id);
@@ -33,12 +13,12 @@ function get2DContext(id){
 	return context;
 }
 function Play() {
-    time = setInterval(Chronometre, 100);
+    time = setInterval(dispDecrementSeconds, 100);
     time2 = setInterval(create, 100);
     
 }
 
-function goodSmiley(){
+function Smiley(){
     // dessin après chaque 30 secondes
     let context = get2DContext("canvas");
 
@@ -114,7 +94,16 @@ function displayDateTime(){
 }
 
 function dispDecrementSeconds(){
-
+    ms+=1;
+    if(ms == 10){
+        ms=1;
+        s-=1;
+    }
+    
+    if(s<= 0){
+        Smiley();
+    
+    }
 
 }
 
@@ -149,7 +138,7 @@ function main(){
     document.body.insertBefore(para2, canvas);
     
     ms = 0;
-    s = 0;
+    s = 59;
     m= 0;
     h= 0;
     Play();
